@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="dist/app.css">
+    <title>Loremfakersum</title>
+  </head>
+  <body>
+    <div class="centered">
+      <div class="options">
+        <ul>
+          <li class="active" data-target="#lorem">Lorem</li>
+          <li data-target="#general">General</li>
+          <li data-target="#address">Address</li>
+          <!-- <li data-target="#date">Date</li>
+          <li data-target="#finance">Finance</li> -->
+        </ul>
+      </div>
+
+      <div id="lorem" class="tab tab--active">
+        <div class="words barwrappers" data-cat="words" data-label="word">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="sentences barwrappers" data-cat="sentences" data-label="sentence">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="paragraph barwrappers" data-cat="paragraph" data-label="paragraph"><span></span></div>
+        <span data-selection>1 word</span>
+      </div>
+
+      <div id="general" class="tab">
+        <ul data-cat="name">
+          <li data-choice="findName">Full name</li>
+          <li data-choice="firstName">First name</li>
+          <li data-choice="lastName">Last name</li>
+        </ul>
+        <ul>
+          <li data-choice="companyName">Company name</li>
+          <li data-choice="jobTitle">Job title</li>
+        </ul>
+        <ul>
+          <li data-choice="userName">Username</li>
+          <li data-choice="email">Email</li>
+          <li data-choice="phoneNumber">Phone number</li>
+        </ul>
+      </div>
+
+      <div id="address" class="tab">
+        <ul>
+          <li data-choice="streetName">Street name</li>
+          <li data-choice="streetAddress">Street address</li>
+        </ul>
+        <ul data-cat="name">
+          <li data-choice="zipCode">Zipcode</li>
+          <li data-choice="city">City</li>
+          <li data-choice="country">Country</li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>
