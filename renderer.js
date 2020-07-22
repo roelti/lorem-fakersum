@@ -4,7 +4,7 @@
 // `nodeIntegration` is turned off. Use `preload.js` to
 // selectively enable features needed in the rendering
 // process.
-const { ipcRenderer } = require('electron')
+const { ipcRenderer, shell } = require('electron')
 window.$ = window.jQuery = require('jquery')
 
 document.querySelectorAll('[data-choice]').forEach(item => {
@@ -42,4 +42,10 @@ $('.options').on('click', 'li', function(e){
 
     $(this).addClass('active')
     $(document).find(target).addClass('tab--active')
+})
+
+$('a').on('click', function(e){
+    e.preventDefault();
+    const url = $(this).attr('href');
+    shell.openExternal(url)
 })

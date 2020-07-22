@@ -17,8 +17,14 @@ const mb = menubar({
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true
     }
-  }
+  },
+  icon: 'icon.png',
+  preloadWindow: true,
 })
+
+mb.on('after-create-window', () => {
+  mb.window.openDevTools()
+});
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.

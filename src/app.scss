@@ -94,10 +94,10 @@ ul {
 
     &:hover {
         > span {
-            background: black;
+            background: $color-hightlight;
         }
         > span:hover ~ span {
-            background: lightgray;
+            background: darkgrey;
         }
     }
 
@@ -106,7 +106,7 @@ ul {
         margin: 0 $spacing/2;
         height: $spacing*2;
         width: 100%;
-        background: lightgray;
+        background: darkgrey;
 
         &:after {
             content: "";
@@ -134,4 +134,15 @@ ul {
     display: block;
     width: 100%;
     padding: 0 15px;
+}
+
+footer {
+    font-size: 12px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+
+    a {
+        color: $color-hightlight-dark;
+    }
 }
