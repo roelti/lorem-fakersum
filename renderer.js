@@ -15,7 +15,7 @@ document.querySelectorAll('[data-choice]').forEach(item => {
 })
 
 ipcRenderer.on('copy-response', (event, arg) => {
-  console.log(arg) // prints "pong"
+  //console.log(arg) // prints "pong"
 })
 
 $('.barwrappers span').on('mouseover', function(e){
