@@ -18,12 +18,12 @@ const mb = menubar({
       nodeIntegration: true
     }
   },
-  icon: 'icon.png',
+  icon: path.join(__dirname, 'icon.png'),
   preloadWindow: true,
 })
 
 mb.on('after-create-window', () => {
-  mb.window.openDevTools()
+  //mb.window.openDevTools()
 });
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -39,7 +39,6 @@ const store = new Store({
 });
 
 mb.on('ready', () => {
-  console.log('Menubar app is ready.');
   faker.locale = store.get('lang');
   console.log(faker.locale);
 });

@@ -1,7 +1,7 @@
 {
-  "name": "electron-quick-start",
+  "name": "lorem-fakersum",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "An app which uses faker.js to generate lorem ipsum text or fake data",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -24,6 +24,7 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^7.1.2",
+    "electron-packager": "^15.0.0",
     "laravel-mix": "^5.0.4",
     "resolve-url-loader": "^3.1.0",
     "sass": "^1.26.10",
