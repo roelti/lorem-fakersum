@@ -18,13 +18,17 @@ const mb = menubar({
       nodeIntegration: true
     }
   },
-  icon: path.join(__dirname, 'icon.png'),
+  icon: path.join(__dirname, 'IconTemplate.png'),
   preloadWindow: true,
 })
 
 mb.on('after-create-window', () => {
   //mb.window.openDevTools()
 });
+
+app.setLoginItemSettings({
+  openAtLogin: true,
+})
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
